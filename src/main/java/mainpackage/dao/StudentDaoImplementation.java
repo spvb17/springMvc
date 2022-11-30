@@ -28,4 +28,12 @@ public class StudentDaoImplementation implements StudentDao
         Session session = sessionFactory.getCurrentSession();
         session.save(student);
     }
+
+    @Override
+    public Student getStudent(int id)
+    {
+        Session session = sessionFactory.getCurrentSession();
+        Student student = session.get(Student.class, id);
+        return student;
+    }
 }
