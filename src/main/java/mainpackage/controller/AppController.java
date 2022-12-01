@@ -47,4 +47,11 @@ public class AppController
         model.addAttribute("studentAttribute", student);
         return "student-info-view";
     }
+
+    @RequestMapping("/deleteStudent")
+    public String deleteStudent(@RequestParam("studentId") int id)
+    {
+        studentService.deleteStudent(id);
+        return "redirect:/";
+    }
 }

@@ -11,4 +11,6 @@ public interface StudentService
     public void saveStudent(Student student);
 
     public Student getStudent(int id);
+
+    public void deleteStudent(int id);
 }

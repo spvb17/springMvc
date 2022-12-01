@@ -14,11 +14,19 @@
                 <th>Course</th>
             </tr>
             <c:forEach var="student" items="${allStudsAttribute}">
+                <c:url var="updateButton" value="/updateStudent">
+                    <c:param name="studentId" value="${student.id}"/>
+                </c:url>
+                <c:url var="deleteButton" value="/deleteStudent">
+                    <c:param name="studentId" value="${student.id}"/>
+                </c:url>
                 <tr>
                     <td>${student.name}</td>
                     <td>${student.surname}</td>
                     <td>${student.specialization}</td>
                     <td>${student.course}</td>
+                    <td><input type="button" value="Update" onclick="window.location.href='${updateButton}'"></td>
+                    <td><input type="button" value="Delete" onclick="window.location.href='${deleteButton}'"></td>
                 </tr>
             </c:forEach>
         </table>

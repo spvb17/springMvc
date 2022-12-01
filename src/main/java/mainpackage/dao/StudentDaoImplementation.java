@@ -3,6 +3,7 @@ package mainpackage.dao;
 import mainpackage.entity.Student;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
@@ -26,7 +27,7 @@ public class StudentDaoImplementation implements StudentDao
     @Override
     public void saveStudent(Student student) {
         Session session = sessionFactory.getCurrentSession();
-        session.save(student);
+        session.saveOrUpdate(student);
     }
 
     @Override
@@ -35,5 +36,13 @@ public class StudentDaoImplementation implements StudentDao
         Session session = sessionFactory.getCurrentSession();
         Student student = session.get(Student.class, id);
         return student;
+    }
+
+    @Override
+    public void deleteStudent(int id) {
+        Session session = sessionFactory.getCurrentSession();
+        Query<Student> query = session.createQuery("delete from Student where id=:studentId");
+        query.setParameter("studentId", id);
+        query.executeUpdate();
     }
 }

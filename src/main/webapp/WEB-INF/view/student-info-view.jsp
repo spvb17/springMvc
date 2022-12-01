@@ -8,7 +8,7 @@
             </h1>
         </div>
         <form:form action="saveStudent" modelAttribute="studentAttribute">
-            <form:hidden path="id"
+            <form:hidden path="id"/>
 
             Name <form:input path="name"/>
             <br>
@@ -18,7 +18,7 @@
             <br>
             Course <form:input path="course"/>
             <br>
-<%--            <input type="submit" value="Ok">--%>
+            <input type="submit" value="Ok">
         </form:form>
     </body>
 </html>
