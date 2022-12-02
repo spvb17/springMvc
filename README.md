@@ -1,4 +1,5 @@
 # springMvc project
+![2560px-Spring_Framework_Logo_2018 svg](https://user-images.githubusercontent.com/90541044/205396759-7eeb4e2d-2f52-42df-8a59-cb3f67831fdc.png)
 
 ## About
 This is my pet project that allows to do CRUD operations. Web student management system using such technologies as spring mvc, hibernate, aop. You can add students to database, update exsisting student or delete. 
