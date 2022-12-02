@@ -1,24 +1,21 @@
 # springMvc project
 
 ## About
-This is a my pet project, web student management system using such technologies as spring mvc, hibernate, aop. You can add students to database, update exsisting student and delete. 
+This is a my pet project that allows to do CRUD operations. Web student management system using such technologies as spring mvc, hibernate, aop. You can add students to database, update exsisting student or delete. 
 
 ## Demo
+<img src="https://user-images.githubusercontent.com/90541044/205387097-80a71a64-4030-44e8-b6e7-4c86f97f41fc.mp4">
 
 
-## Creating database to run project
-You have to create database and table to run project
+## Creating database
+You have to create database to run project. This project uses postgres
 
 * Create database in pgAdmin4
 * Import studentstable.sql file which is in the root of the project
 
-## Change applicationContext file
-Нou have to change the code snippet below to connect to your database
+## Change context file
+You have to change the applicationContext.xml file to connect to your database. Change the values to yours
 
-`<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
-          destroy-method="close">
-        <property name="driverClass" value="org.postgresql.Driver" />
-        <property name="jdbcUrl" value="jdbc:postgresql://localhost:5432/Student?useSSL=false" /> //Your database url 
-        <property name="user" value="postgres" /> //Your database username
-        <property name="password" value="webuser" /> //Your database password
-</bean>`
+## Run project
+
+

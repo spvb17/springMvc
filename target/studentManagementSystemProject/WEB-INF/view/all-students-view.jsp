@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <meta charset="UTF-8">
-<title>Mvc application</title>
+<title>spvb17</title>
 <head>
     <link href="<c:url value="/resources/css/index.css"/>" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">

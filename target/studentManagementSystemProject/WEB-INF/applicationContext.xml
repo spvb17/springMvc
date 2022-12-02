@@ -34,9 +34,9 @@
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
           destroy-method="close">
         <property name="driverClass" value="org.postgresql.Driver" />
-        <property name="jdbcUrl" value="jdbc:postgresql://localhost:5432/Student?useSSL=false" />
-        <property name="user" value="postgres" />
-        <property name="password" value="webuser" />
+        <property name="jdbcUrl" value="jdbc:postgresql://localhost:5432/Student?useSSL=false" /> <!-- Your database url -->
+        <property name="user" value="postgres" />    <!-- Your database username -->
+        <property name="password" value="webuser" /> <!-- Your database password -->
     </bean>
 
     <bean id="sessionFactory"
