@@ -1,3 +1,5 @@
+# springMvc project
+
 ## About
 This is my pet project that allows to do CRUD operations. Web student management system using such technologies as spring mvc, hibernate, aop. You can add students to database, update exsisting student or delete. 
 
